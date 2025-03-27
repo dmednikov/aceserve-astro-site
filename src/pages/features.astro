@@ -1,12 +1,52 @@
 ---
-layout: "../layouts/BaseLayout.astro"
-title: "Page Title - AceServe"
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<header style="text-align: center; padding: 2rem;">
-  <h1>Page Title</h1>
-</header>
+<BaseLayout title="Features">
+  <section class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold mb-6 text-center">Features</h1>
+    <ul class="list bg-base-100 rounded-box shadow-md">
+  <li class="list-row p-4 border-b border-base-300">
+    <div class="font-semibold">Online Court Booking System</div>
+    <div class="text-sm text-gray-600">Enable members to reserve courts in real-time, reducing scheduling conflicts and optimizing court utilization.</div>
+  </li>
+  <li class="list-row p-4 border-b border-base-300">
+    <div class="font-semibold">Membership Management</div>
+    <div class="text-sm text-gray-600">Streamline the process of enrolling, tracking, and communicating with club members through a centralized platform.</div>
+  </li>
+  <li class="list-row p-4 border-b border-base-300">
+    <div class="font-semibold">Automated Billing and Payments</div>
+    <div class="text-sm text-gray-600">Facilitate secure online transactions for membership fees, lessons, and merchandise, enhancing financial operations.</div>
+  </li>
+  <li class="list-row p-4 border-b border-base-300">
+    <div class="font-semibold">Event and Tournament Scheduling</div>
+    <div class="text-sm text-gray-600">Organize and manage events, leagues, and tournaments with integrated scheduling tools that notify participants automatically.</div>
+  </li>
+  <li class="list-row p-4 border-b border-base-300">
+    <div class="font-semibold">Performance Analytics</div>
+    <div class="text-sm text-gray-600">Provide coaches and players with detailed statistics and video analysis to track progress and improve performance.</div>
+  </li>
+  <li class="list-row p-4 border-b border-base-300">
+    <div class="font-semibold">Mobile App Integration</div>
+    <div class="text-sm text-gray-600">Offer a branded mobile application that allows members to book courts, receive notifications, and engage with the club community on-the-go.</div>
+  </li>
+  <li class="list-row p-4 border-b border-base-300">
+    <div class="font-semibold">Pro Shop Management</div>
+    <div class="text-sm text-gray-600">Manage inventory and sales of equipment and apparel, with an online storefront for member convenience.</div>
+  </li>
+  <li class="list-row p-4 border-b border-base-300">
+    <div class="font-semibold">Customizable Reporting</div>
+    <div class="text-sm text-gray-600">Generate comprehensive reports on membership trends, financials, and facility usage to inform strategic decisions.</div>
+  </li>
+  <li class="list-row p-4 border-b border-base-300">
+    <div class="font-semibold">Digital Waiver Management</div>
+    <div class="text-sm text-gray-600">Easily collect, store, and manage participant waivers electronically for a seamless and paperless onboarding experience.</div>
+  </li>
+  <li class="list-row p-4">
+    <div class="font-semibold">Bot Detection and Booking Security</div>
+    <div class="text-sm text-gray-600">Protect your platform with intelligent detection of automated login and booking attempts, ensuring fair access for all users.</div>
+  </li>
+</ul>
 
-<main style="padding: 2rem;">
-  <p>Content for the Features page.</p>
-</main>
+  </section>
+</BaseLayout>

@@ -1,12 +1,50 @@
 ---
-layout: "../layouts/BaseLayout.astro"
-title: "Page Title - AceServe"
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<header style="text-align: center; padding: 2rem;">
-  <h1>Page Title</h1>
-</header>
+<BaseLayout title="Pricing">
+  <h1>Pricing Plans</h1>
+  <p>Choose the plan that best fits your tennis club's needs. Our flexible pricing options are designed to accommodate clubs of all sizes.</p>
 
-<main style="padding: 2rem;">
-  <p>Content for the Pricing page.</p>
-</main>
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <h2>Basic</h2>
+      <p class="price">$99/month</p>
+      <ul>
+        <li>Online Court Booking System</li>
+        <li>Membership Management</li>
+        <li>Automated Billing and Payments</li>
+        <li>Email Support</li>
+      </ul>
+      <a href="/signup/basic" class="cta-button">Choose Basic</a>
+    </div>
+
+    <div class="pricing-plan recommended">
+      <h2>Standard</h2>
+      <p class="price">$199/month</p>
+      <ul>
+        <li>All Basic features</li>
+        <li>Event and Tournament Scheduling</li>
+        <li>Performance Analytics</li>
+        <li>Mobile App Integration</li>
+        <li>Priority Email Support</li>
+      </ul>
+      <a href="/signup/standard" class="cta-button">Choose Standard</a>
+    </div>
+
+    <div class="pricing-plan">
+      <h2>Premium</h2>
+      <p class="price">$299/month</p>
+      <ul>
+        <li>All Standard features</li>
+        <li>Pro Shop Management</li>
+        <li>Customizable Reporting</li>
+        <li>Dedicated Account Manager</li>
+        <li>24/7 Support</li>
+      </ul>
+      <a href="/signup/premium" class="cta-button">Choose Premium</a>
+    </div>
+  </div>
+
+  <p>For enterprise solutions tailored to your club's specific needs, please <a href="/contact">contact us</a> for a custom quote.</p>
+</BaseLayout>

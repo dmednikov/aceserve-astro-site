@@ -1,26 +1,42 @@
 ---
-layout: "../layouts/BaseLayout.astro"
-title: "AceServe - Cloud Software for Tennis Clubs"
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<header style="text-align: center; padding: 4rem 1rem;">
-  <h1>Welcome to AceServe</h1>
-  <h2>Smarter Tennis Club Management</h2>
-  <p>Book courts, manage memberships, and streamline your club's operations with our cloud-based tools.</p>
-  <a href="/features" style="font-weight: bold;">Explore Features ↓</a>
-</header>
+<BaseLayout>
+  <section class="text-center py-12">
+    <h1 class="text-5xl font-bold mb-6">Welcome to AceServe</h1>
+    <p class="text-lg text-gray-700 mb-8">Providing top-notch services to cater to your needs.</p>
+    <a href="/features" class="btn btn-primary">Explore Features</a>
+  </section>
 
-<section id="features" style="padding: 2rem;">
-  <h3>Key Features</h3>
-  <ul>
-    <li>🎾 Online Court Booking</li>
-    <li>🧾 Member Billing & CRM</li>
-    <li>📈 Club Usage Analytics</li>
-    <li>📅 Event Scheduling</li>
-  </ul>
+  <section class="py-12">
+  <h2 class="text-3xl font-semibold mb-6">Our Services</h2>
+  <div class="space-y-8">
+    <div class="card bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h3 class="card-title">Online Court Booking System</h3>
+        <p>Enable members to reserve courts in real-time, reducing scheduling conflicts and optimizing court utilization.</p>
+      </div>
+    </div>
+    <div class="card bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h3 class="card-title">Membership Management</h3>
+        <p>Streamline the process of enrolling, tracking, and communicating with club members through a centralized platform.</p>
+      </div>
+    </div>
+    <div class="card bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h3 class="card-title">Automated Billing and Payments</h3>
+        <p>Facilitate secure online transactions for membership fees, lessons, and merchandise, enhancing financial operations.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section style="text-align: center; padding: 2rem;">
-  <h3>Contact Us</h3>
-  <p>Email us at <strong>info@aceserve.com</strong></p>
-</section>
+
+  <section class="py-12 text-center">
+    <h2 class="text-3xl font-semibold mb-6">Why Choose Us?</h2>
+    <p class="text-lg text-gray-700 mb-8">We are committed to delivering excellence and ensuring customer satisfaction.</p>
+    <a href="/about" class="btn btn-secondary">Learn More About Us</a>
+  </section>
+</BaseLayout>
