@@ -3,40 +3,94 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout>
+
+  <!-- Hero Carousel (Fixed structure) -->
+  <section class="carousel w-full relative">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item relative w-full">
+      <img src="/images/banners/online_booking.png" class="w-full object-cover" alt="Court Booking" />
+      <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 text-gray-800">
+        <div class="bg-white bg-opacity-90 rounded-xl shadow-lg p-6 max-w-xl">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Online Court Booking System</h2>
+          <p class="text-lg">Enable members to reserve courts in real-time, reducing scheduling conflicts and optimizing court utilization.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item relative w-full hidden">
+      <img src="/images/banners/membership_management.png" class="w-full object-cover" alt="Membership Management" />
+      <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 text-gray-800">
+        <div class="bg-white bg-opacity-90 rounded-xl shadow-lg p-6 max-w-xl">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Membership Management</h2>
+          <p class="text-lg">Streamline the process of enrolling, tracking, and communicating with club members through a centralized platform.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item relative w-full hidden">
+      <img src="/images/banners/billing_payments.png" class="w-full object-cover" alt="Billing & Payments" />
+      <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 text-gray-800">
+        <div class="bg-white bg-opacity-90 rounded-xl shadow-lg p-6 max-w-xl">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Automated Billing and Payments</h2>
+          <p class="text-lg">Facilitate secure online transactions for membership fees, lessons, and merchandise, enhancing financial operations.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button id="prev" class="btn btn-circle absolute left-4 top-1/2 -translate-y-1/2 z-10">❮</button>
+    <button id="next" class="btn btn-circle absolute right-4 top-1/2 -translate-y-1/2 z-10">❯</button>
+  </section>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelectorAll('.carousel-item');
+      const prevBtn = document.getElementById('prev');
+      const nextBtn = document.getElementById('next');
+      let current = 0;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('hidden', i !== index);
+        });
+      }
+
+      prevBtn.addEventListener('click', () => {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+      });
+
+      nextBtn.addEventListener('click', () => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      });
+
+      setInterval(() => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      }, 5000);
+
+      showSlide(current);
+    });
+  </script>
+
+  <!-- Welcome Section -->
   <section class="text-center py-12">
     <h1 class="text-5xl font-bold mb-6">Welcome to AceServe</h1>
-    <p class="text-lg text-gray-700 mb-8">Providing top-notch services to cater to your needs.</p>
+    <p class="text-lg text-gray-700 mb-8">
+      Simplifying tennis club operations through intelligent cloud solutions.
+    </p>
     <a href="/features" class="btn btn-primary">Explore Features</a>
   </section>
 
-  <section class="py-12">
-  <h2 class="text-3xl font-semibold mb-6">Our Services</h2>
-  <div class="space-y-8">
-    <div class="card bg-base-100 shadow-xl">
-      <div class="card-body">
-        <h3 class="card-title">Online Court Booking System</h3>
-        <p>Enable members to reserve courts in real-time, reducing scheduling conflicts and optimizing court utilization.</p>
-      </div>
-    </div>
-    <div class="card bg-base-100 shadow-xl">
-      <div class="card-body">
-        <h3 class="card-title">Membership Management</h3>
-        <p>Streamline the process of enrolling, tracking, and communicating with club members through a centralized platform.</p>
-      </div>
-    </div>
-    <div class="card bg-base-100 shadow-xl">
-      <div class="card-body">
-        <h3 class="card-title">Automated Billing and Payments</h3>
-        <p>Facilitate secure online transactions for membership fees, lessons, and merchandise, enhancing financial operations.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+  <!-- Why Choose Us Section -->
   <section class="py-12 text-center">
     <h2 class="text-3xl font-semibold mb-6">Why Choose Us?</h2>
     <p class="text-lg text-gray-700 mb-8">We are committed to delivering excellence and ensuring customer satisfaction.</p>
     <a href="/about" class="btn btn-secondary">Learn More About Us</a>
   </section>
+
 </BaseLayout>

@@ -4,49 +4,88 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="Features">
   <section class="container mx-auto px-4 py-8">
-    <h1 class="text-4xl font-bold mb-6 text-center">Features</h1>
-    <ul class="list bg-base-100 rounded-box shadow-md">
-  <li class="list-row p-4 border-b border-base-300">
-    <div class="font-semibold">Online Court Booking System</div>
-    <div class="text-sm text-gray-600">Enable members to reserve courts in real-time, reducing scheduling conflicts and optimizing court utilization.</div>
-  </li>
-  <li class="list-row p-4 border-b border-base-300">
-    <div class="font-semibold">Membership Management</div>
-    <div class="text-sm text-gray-600">Streamline the process of enrolling, tracking, and communicating with club members through a centralized platform.</div>
-  </li>
-  <li class="list-row p-4 border-b border-base-300">
-    <div class="font-semibold">Automated Billing and Payments</div>
-    <div class="text-sm text-gray-600">Facilitate secure online transactions for membership fees, lessons, and merchandise, enhancing financial operations.</div>
-  </li>
-  <li class="list-row p-4 border-b border-base-300">
-    <div class="font-semibold">Event and Tournament Scheduling</div>
-    <div class="text-sm text-gray-600">Organize and manage events, leagues, and tournaments with integrated scheduling tools that notify participants automatically.</div>
-  </li>
-  <li class="list-row p-4 border-b border-base-300">
-    <div class="font-semibold">Performance Analytics</div>
-    <div class="text-sm text-gray-600">Provide coaches and players with detailed statistics and video analysis to track progress and improve performance.</div>
-  </li>
-  <li class="list-row p-4 border-b border-base-300">
-    <div class="font-semibold">Mobile App Integration</div>
-    <div class="text-sm text-gray-600">Offer a branded mobile application that allows members to book courts, receive notifications, and engage with the club community on-the-go.</div>
-  </li>
-  <li class="list-row p-4 border-b border-base-300">
-    <div class="font-semibold">Pro Shop Management</div>
-    <div class="text-sm text-gray-600">Manage inventory and sales of equipment and apparel, with an online storefront for member convenience.</div>
-  </li>
-  <li class="list-row p-4 border-b border-base-300">
-    <div class="font-semibold">Customizable Reporting</div>
-    <div class="text-sm text-gray-600">Generate comprehensive reports on membership trends, financials, and facility usage to inform strategic decisions.</div>
-  </li>
-  <li class="list-row p-4 border-b border-base-300">
-    <div class="font-semibold">Digital Waiver Management</div>
-    <div class="text-sm text-gray-600">Easily collect, store, and manage participant waivers electronically for a seamless and paperless onboarding experience.</div>
-  </li>
-  <li class="list-row p-4">
-    <div class="font-semibold">Bot Detection and Booking Security</div>
-    <div class="text-sm text-gray-600">Protect your platform with intelligent detection of automated login and booking attempts, ensuring fair access for all users.</div>
-  </li>
-</ul>
+    <h1 class="text-4xl font-bold mb-10 text-center">Features</h1>
 
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card bg-base-100 shadow-md">
+        <figure><img src="/images/cards/court_booking.png" alt="Court Booking" class="w-full h-48 object-cover" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Online Court Booking System</h2>
+          <p>Enable members to reserve courts in real-time, reducing scheduling conflicts and optimizing court utilization.</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-md">
+        <figure><img src="/images/cards/membership_management.png" alt="Membership Management" class="w-full h-48 object-cover" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Membership Management</h2>
+          <p>Streamline the process of enrolling, tracking, and communicating with club members through a centralized platform.</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-md">
+        <figure><img src="/images/cards/billing_payments.png" alt="Billing" class="w-full h-48 object-cover" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Automated Billing and Payments</h2>
+          <p>Facilitate secure online transactions for membership fees, lessons, and merchandise, enhancing financial operations.</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-md">
+        <figure><img src="/images/cards/event_tournament.png" alt="Tournament Scheduling" class="w-full h-48 object-cover" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Event and Tournament Scheduling</h2>
+          <p>Organize and manage events, leagues, and tournaments with integrated scheduling tools that notify participants automatically.</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-md">
+        <figure><img src="/images/cards/performance_analytics.png" alt="Performance Analytics" class="w-full h-48 object-cover" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Performance Analytics</h2>
+          <p>Provide coaches and players with detailed statistics and video analysis to track progress and improve performance.</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-md">
+        <figure><img src="/images/cards/mobile_app.png" alt="Mobile App" class="w-full h-48 object-cover" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Mobile App Integration</h2>
+          <p>Offer a branded mobile application that allows members to book courts, receive notifications, and engage with the club community on-the-go.</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-md">
+        <figure><img src="/images/cards/billing_payments.png" alt="Pro Shop" class="w-full h-48 object-cover" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Pro Shop Management</h2>
+          <p>Manage inventory and sales of equipment and apparel, with an online storefront for member convenience.</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-md">
+        <figure><img src="/images/cards/pro_shop.png" alt="Reporting" class="w-full h-48 object-cover" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Customizable Reporting</h2>
+          <p>Generate comprehensive reports on membership trends, financials, and facility usage to inform strategic decisions.</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-md">
+        <figure><img src="/images/cards/digital_waivers.png" alt="Waivers" class="w-full h-48 object-cover" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Digital Waiver Management</h2>
+          <p>Easily collect, store, and manage participant waivers electronically for a seamless and paperless onboarding experience.</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-md">
+        <figure><img src="/images/cards/bot_detection.png" alt="Bot Detection" class="w-full h-48 object-cover" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Bot Detection and Booking Security</h2>
+          <p>Protect your platform with intelligent detection of automated login and booking attempts, ensuring fair access for all users.</p>
+        </div>
+      </div>
+    </div>
   </section>
 </BaseLayout>
